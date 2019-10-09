@@ -1,0 +1,47 @@
+
+
+<div class="cell">
+  <h3><%= @book.Title %></h3>
+</div>
+
+<div class="cell">
+  <b>Subtitle:</b>
+  <%= @book.Subtitle %>
+</div>
+
+<hr>
+
+<div class="cell">
+  <b>Call num:</b>
+  <%= @book.Call_num %>
+</div>
+
+<div class="cell">
+  <b>Author:</b>
+  <%= @book.Author_Last %>, <%= @book.Author_first %>
+</div>
+
+<div class="cell">
+  <b>Copyright:</b>
+  <%= @book.Copyright %>
+</div>
+
+<div class="cell">
+  <b>Subject:</b>
+  <%= @book.Subject %>
+</div>
+
+<div class="cell">
+  <b>Annotation:</b>
+  <%= @book.Annotation %>
+</div>
+
+<!-- <div class="cell">
+  <b>Status:</b>
+  <%= @book.status %>
+</div> -->
+
+<div class="cell">
+<%= link_to 'Edit', edit_book_path(@book), class: "default button float-left" %>
+<%= link_to 'Back', books_path, class: "default button float-left" %>
+</div>

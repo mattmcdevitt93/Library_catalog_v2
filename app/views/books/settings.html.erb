@@ -1,0 +1,54 @@
+<div class="cell">
+	<h1>User Index</h1>
+</div>
+<div class="cell">
+	<%= link_to 'User Groups', groups_path, class: "button search_button"  %>
+	<%= link_to 'User Memberships', memberships_path, class: "button search_button"  %>
+	<%= link_to "Update Validation", {:controller => "books", :action => "settings", :update => true }, class: "default float-left", class: "warning button search_button" %>
+</div>
+<table class="cell">
+	<thead>
+		<tr>
+			<th>User</th>
+			<th>Approved?</th>
+			<th>Admin?</th>
+			<th colspan='2'>Functions</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @users.each do |user_item| %>
+		<tr>
+			<%= form_for :user_item do |f| %>
+				<td class="">
+					<%= user_item.id %> ) <%= user_item.email %>
+				</td>
+				<td>
+					<%= user_item.approved %>
+				</td>
+				<td>
+					<%= user_item.admin %>
+				</td>				
+			<% end %>
+			<%= form_for(@members) do |f| %>
+			<td class="">
+				<% user_groups = [] %>
+				<% @groups = Group.all %>
+				<% @groups.each do |group| %>
+				<% user_groups = user_groups.push([group.Name, group.id]) %>
+				<% end %>
+				<%= f.select :group_id, user_groups %>
+
+			</td>
+			<%= f.hidden_field :user_id, value: user_item.id %>
+			<%= f.hidden_field :approved?, value: true %>
+			<td class=""> 
+				<%= f.submit "Add user to Group", class: "default button float-left" %>
+			</td>
+
+			<% end %>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+

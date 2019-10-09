@@ -1,0 +1,86 @@
+body {
+	min-width: 660px !important;
+}
+
+div {
+	/*border: 1px solid black;*/
+}
+
+.hidden {
+	visibility: hidden;
+	display: none;
+}
+
+#yield {
+	padding: 15px;
+}
+
+#headder{
+	border-bottom: 2px solid black;
+	/*padding: 2px;*/
+	background: #3563E8;
+}
+
+.login{
+	/*background: #FFFFFF;*/
+	padding-left: 25px;
+	height: 0;
+	border-bottom: 55px solid white;
+	border-left: 55px solid transparent;
+}
+
+.title_text{
+	font-size: 36px;
+	color: white;
+}
+
+a.title_text:hover {
+	color: rgba(200, 200, 200, 1) !important;
+
+}
+
+.menu-button{
+	margin: auto;
+}
+
+.button {
+	margin-right: -3px !important;
+	margin-bottom: 0px !important;
+	padding: 13px !important;
+}
+
+#toolbar-switch {
+	width: 48px;
+	height: 48px;
+	background-image: url(tool-toggle-white.png);
+	background-size: 48px 48px;
+	margin: 2px;
+	float: left;
+}
+
+.pagination {
+	float: left;
+}
+
+.search_type {
+	max-width: 275px !important;
+}
+
+.search_button {
+	max-height: 39px !important;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+
+}
+
+.book_form {
+	min-width: 30%;
+	/*border: 1px solid black;*/
+
+}
+
+.book_field {
+	float: left;
+	min-width: 400px;
+	/*border: 1px solid black;*/
+}

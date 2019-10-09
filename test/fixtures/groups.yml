@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  is_admin: false
+  is_approver: false
+
+two:
+  Name: MyString
+  is_admin: false
+  is_approver: false

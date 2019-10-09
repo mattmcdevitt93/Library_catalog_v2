@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Call_num: MyString
+  Title: MyString
+  Subtitle: MyString
+  Author_first: 
+  Author_Last: MyString
+  Copyright: 1
+  Subject: MyText
+  Annotation: MyText
+  status: false
+
+two:
+  Call_num: MyString
+  Title: MyString
+  Subtitle: MyString
+  Author_first: 
+  Author_Last: MyString
+  Copyright: 1
+  Subject: MyText
+  Annotation: MyText
+  status: false

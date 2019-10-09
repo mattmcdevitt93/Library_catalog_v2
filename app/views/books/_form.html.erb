@@ -1,0 +1,49 @@
+<%= form_with(model: book, local: true) do |form| %>
+
+  <div class="book_field">
+    Call_num
+    <%= form.text_field :Call_num, {:class => 'book_form'} %>
+  </div>
+
+  <div class="book_field">
+    Title
+    <%= form.text_field :Title, {:class => 'book_form'}  %>
+  </div>
+
+  <div class="book_field">
+    Subtitle
+    <%= form.text_field :Subtitle, {:class => 'book_form'}  %>
+  </div>
+
+  <div class="book_field">
+    Author_first
+    <%= form.text_field :Author_first, {:class => 'book_form'} %>
+  </div>
+
+  <div class="book_field">
+    Author_Last
+    <%= form.text_field :Author_Last, {:class => 'book_form'} %>
+  </div>
+
+  <div class="book_field">
+    Copyright
+    <%= form.number_field :Copyright, {:class => 'book_form'} %>
+  </div>
+
+  <div class="book_field">
+    Subject
+    <%= form.text_area :Subject, {:class => 'book_form'} %>
+  </div>
+
+  <div class="book_field">
+    Annotation
+    <%= form.text_area :Annotation, {:class => 'book_form'} %>
+  </div>
+
+  <div class="book_field hidden">
+    status
+    <%= form.check_box :status, {:class => 'book_form'} %>
+  </div>
+  <hr>
+    <%= form.submit 'Submit', :class => 'button search_button' %>
+<% end %>

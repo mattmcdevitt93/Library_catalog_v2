@@ -1,0 +1,28 @@
+<div class='cell small-12'>
+  <h1>Search Results</h1>
+</div>
+<div class='cell'>
+	Search Library by <%= @search.to_s %>
+
+
+</div>
+<table class="cell">
+	<thead>
+		<tr>
+			<th>Call num</th>
+			<th>Title</th>
+			<th>Author last</th>
+			<th>Copyright</th>
+			<th>Subject</th>
+			<th colspan="3"></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @results.each do |book| %>
+
+		<%= render 'table', book: book %>
+
+		<% end %>
+	</tbody>
+</table>
