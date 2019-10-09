@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.1'
 
+# github security updates
+
+gem "nokogiri", ">= 1.10.4"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
@@ -40,7 +44,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg_search'
 
 # User login
-gem 'devise'
+
+gem "devise", ">= 4.7.1"
+
 # Timing / scheduler
 gem 'rufus-scheduler'
 gem 'seed_dump'
