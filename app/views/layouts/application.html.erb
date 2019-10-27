@@ -18,7 +18,7 @@
     <div class="cell large-7 medium-12 small-12">
       <div class='active' id='toolbar-switch' onclick="Module.toolbar_rotate()"></div>
       <span>
-        <%= link_to "LWVA Database", root_path, :class => "title_text" %>
+        <%= link_to "LWVA Library Database", root_path, :class => "title_text" %>
       </span>
     </div>
 
@@ -58,7 +58,7 @@
             <%= form_tag({ controller: 'books', action: 'search' }, method: 'get') do %>
 
             <li class='float-left'>
-              <%= select_tag 'search', options_for_select(['Title', 'Call_num','Author','Copyright', 'Subject']), class: ' search_type' %>
+              <%= select_tag 'search', options_for_select(['Title','Author', 'Call_num','Copyright', 'Subject']), class: ' search_type' %>
             </li>
             <li class='float-left'>
               <%= text_field_tag 'params', "", class: '' %>
