@@ -1,9 +1,10 @@
 <tr>
     <td><%= book.Call_num %></td>
     <td><%= book.Title %></td>
-    <td><%= book.Author_Last %></td>
+    <td><%= book.Author_Last %>, <%= book.Author_first %></td>
     <td><%= book.Copyright %></td>
     <td><%= book.Subject %></td>
+    <td><%= book.Subtitle %></td>
     <td><%= link_to 'Show', book, class: 'button cell' %></td>
     <% if current_user.approved || current_user.admin %>
     <td><%= link_to 'Edit', edit_book_path(book), class: 'button warning cell'  %></td>
