@@ -28,7 +28,7 @@
         Signed in as <%= current_user.email %>
       </li>
       <li>
-        <%= link_to('Edit Account', edit_user_registration_path) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> | <%= current_user.id %><% if current_user.admin == true %>+<% end %>
+        <%= link_to('Edit Account', edit_user_registration_path, class: 'button login_button') %> |<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'button login_button') %> | <%= current_user.id %><% if current_user.admin == true %>+<% end %>
 
       </li>
       <% else %>
@@ -36,7 +36,7 @@
         <%= link_to('Login', new_user_session_path)  %>  
       </li>
       <li>
-        <%= link_to('Sign Up', new_user_registration_path)  %>
+        <%= link_to('Sign Up', new_user_registration_path )  %>
       </li>
       <% end %>
     </div>
