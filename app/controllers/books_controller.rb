@@ -35,19 +35,19 @@ class BooksController < ApplicationController
     if params[:search] == nil
       redirect_to root_path
     elsif params[:search] == "Title"
-      @results = Book.search_by_title(params[:params])
+      @results = Book.search_by_title(params[:params]).reorder(:Author_Last, :Author_first, :Title) 
 
     elsif params[:search] == "Call_num"
-      @results = Book.search_by_call_number(params[:params])
+      @results = Book.search_by_call_number(params[:params]).reorder(:Author_Last, :Author_first, :Title) 
 
     elsif params[:search] == "Subject"
-      @results = Book.search_by_subject(params[:params])
+      @results = Book.search_by_subject(params[:params]).reorder(:Author_Last, :Author_first, :Title) 
 
     elsif params[:search] == "Author"
-      @results = Book.search_by_full_name(params[:params]).reorder(:Author_Last, :Author_first, :Title)
+      @results = Book.search_by_full_name(params[:params]).reorder(:Author_Last, :Author_first, :Title) 
 
     elsif params[:search] == "Copyright"
-      @results = Book.where('Copyright' => params[:params])
+      @results = Book.where('Copyright' => params[:params]).reorder(:Author_Last, :Author_first, :Title) 
     end
      
   end
